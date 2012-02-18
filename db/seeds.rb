@@ -20,3 +20,12 @@ Weapon.destroy_all
 Weapon.create([
   {name: "Hammer", strength: 1, zombie: ash_zombie}
   ])
+  
+Tweet.destroy_all
+
+Tweet.create([
+  {status: "I sure do like Rails", zombie: ash_zombie},
+  {status: "I sure do hate ColdFusion", zombie: ash_zombie},
+  {status: "Your eyelids taste like bacon", zombie: ash_zombie},
+  {status: "Thanks for the fish!", zombie: ash_zombie}
+  ])
