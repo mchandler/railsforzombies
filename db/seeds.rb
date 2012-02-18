@@ -12,3 +12,11 @@ Zombie.create([
   {name: "Bob", graveyard: "Chapel Hills Cemetary"},
   {name: "Jim", graveyard: "Benny Hills Memorial"}
   ])
+  
+ash_zombie = Zombie.find_by_name("Ash")
+
+Weapon.destroy_all
+
+Weapon.create([
+  {name: "Hammer", strength: 1, zombie: ash_zombie}
+  ])
