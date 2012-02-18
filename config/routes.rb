@@ -12,6 +12,23 @@ Railsforzombies::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+resources :tweets
+# match 'new_tweet' => "Tweets#new"
+# match 'all' => redirect('/tweets')
+# match 'google' => redirect('http://www.google.com')
+
+#root route!
+#root :to => "Tweets#index"
+
+#matching with variables in URL
+#/local_tweets/93065
+#/local_tweets/93063
+# match '/local_tweets/:zip_code' => "Tweets#index" #puts :zip_code in params hash
+
+#twitter style user routes, such as twitter.com/mchandler
+# match ':name' => "Tweets#index", :as => 'user_tweets'
+# usage:
+# link_to @user.username, user_tweets_path(#user.username)
 
   # Sample resource route with options:
   #   resources :products do
