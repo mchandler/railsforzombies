@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Zombie.destroy_all
+
+Zombie.create([
+  {name: "Ash", graveyard: "Glen Haven Memorial Cemetary"},
+  {name: "Bob", graveyard: "Chapel Hills Cemetary"},
+  {name: "Jim", graveyard: "Benny Hills Memorial"}
+  ])
