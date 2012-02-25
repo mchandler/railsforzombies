@@ -1,4 +1,6 @@
 Railsforzombies::Application.routes.draw do
+  resources :new_zombies
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

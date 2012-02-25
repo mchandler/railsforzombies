@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120218215419) do
+ActiveRecord::Schema.define(:version => 20120225053919) do
+
+  create_table "new_zombies", :force => true do |t|
+    t.string   "name"
+    t.text     "bio"
+    t.integer  "age"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "email"
+    t.boolean  "rotting",    :default => false
+  end
 
   create_table "tweets", :force => true do |t|
     t.string   "status"

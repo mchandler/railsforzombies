@@ -1,0 +1,2 @@
+module NewZombiesHelper
+end
