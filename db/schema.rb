@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120225062259) do
+ActiveRecord::Schema.define(:version => 20120225063918) do
+
+  create_table "assignments", :force => true do |t|
+    t.integer  "zombie_id"
+    t.integer  "role_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "assignments", ["role_id"], :name => "index_assignments_on_role_id"
+  add_index "assignments", ["zombie_id"], :name => "index_assignments_on_zombie_id"
 
   create_table "brains", :force => true do |t|
     t.integer  "zombie_id"
@@ -30,6 +40,12 @@ ActiveRecord::Schema.define(:version => 20120225062259) do
     t.datetime "updated_at"
     t.string   "email"
     t.boolean  "rotting",    :default => false
+  end
+
+  create_table "roles", :force => true do |t|
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "tweets", :force => true do |t|
