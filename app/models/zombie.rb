@@ -3,4 +3,5 @@ class Zombie < ActiveRecord::Base
   
   has_many :tweets
   has_many :weapons
+  has_one :brain, dependent: :destroy
 end
